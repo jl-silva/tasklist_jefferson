@@ -67,6 +67,22 @@
 						echo 'Tarefa cadastrada.';
 					}
 			break;
+
+			case 'excluir' :
+
+				$query = 'DELETE FROM tasklist WHERE id = '.$id;
+
+				if (!mysqli_query($conn, $query)) {
+
+					echo 'Erro:'.mysqli_error($conn);
+
+				} else {
+
+					echo 'Tarefa de id = '.$id.' excluido com sucesso.';
+
+				} 
+
+			break;
 		}
 	}
 

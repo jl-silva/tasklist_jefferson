@@ -40,14 +40,16 @@
 					$botao = 'Ativar';
 				}
 
-				echo "<tr>";
-				echo "<td>";
+				echo '<tr>';
+				echo '<td>';
 				echo '<a href="?action='.$botao.'&id='.$row['id'].'">'.$botao.'</a>';
+				echo '    ';
+				echo '<a href="?action=excluir&id='.$row['id'].'">Excluir</a>';
 				echo '</td>';
 				echo '<td>'.$row['executor'].'</td>';
 				echo '<td>'.$row['tarefa'].'</td>';
 				echo '<td>'.$situacao.'</td>';
-				echo "</tr>";
+				echo '</tr>';
 			}	
  		}
 
